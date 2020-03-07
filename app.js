@@ -1,6 +1,7 @@
 const canvas= document.getElementById("jsCanvas");
 const ctx=canvas.getContext("2d");
 const colors=document.getElementsByClassName("jsColor");
+const range = document.getElementById("jsRange");
 canvas.width="700";
 canvas.height="700";
 ctx.strokeStyle = '#2c2c2c';
@@ -18,6 +19,7 @@ function onMouseMove(event){
     }else{
         ctx.lineTo(x,y);
         ctx.stroke();
+        console.log(x,y);
     }
 }
 function startPainting(event){
@@ -34,3 +36,6 @@ if(canvas){
     canvas.addEventListener("mouseleave",stopPainting);
 }
 Array.from(colors).forEach(color=>color.addEventListener("click",handleColorClick));
+if(range){
+  range.addEventListener()  
+}
